@@ -1,11 +1,15 @@
+import { mediaUrl } from '../config/media';
 import React from 'react';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 
 export const HeroSection: React.FC = () => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   return (
     <section aria-labelledby="em-hero-title" className="em em-hero">
       <div aria-hidden="true" className="em-hero__media">
-        <video autoPlay loop muted playsInline poster="/ember/hero-poster.webp" preload="auto">
-          <source src="/ember/hero.mp4" type="video/mp4" />
+        <video autoPlay={!prefersReducedMotion} loop muted playsInline poster={mediaUrl("/ember/hero-poster.webp")} preload={prefersReducedMotion ? 'metadata' : 'auto'}>
+          <source src={mediaUrl("/ember/hero.mp4")} type="video/mp4" />
         </video>
       </div>
       <div className="em-wrap em-hero__inner">
@@ -85,45 +89,45 @@ export const HeroSection: React.FC = () => {
           <ul className="em-trust__list">
             <li>
               <a aria-label="Globe-Trotter, see it live in 3D" href="#configurator">
-                <img alt="Globe-Trotter" decoding="async" loading="lazy" src="/logos/clients/globe-trotter.svg" style={{ height: 30 } as React.CSSProperties} />
+                <img alt="Globe-Trotter" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/globe-trotter.svg")} style={{ height: 30 } as React.CSSProperties} />
               </a>
             </li>
             <li>
               <a aria-label="Dozze, see it live in 3D" href="#configurator">
-                <img alt="Dozze" decoding="async" loading="lazy" src="/logos/clients/dozze.png" style={{ height: 17 } as React.CSSProperties} />
+                <img alt="Dozze" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/dozze.png")} style={{ height: 17 } as React.CSSProperties} />
               </a>
             </li>
             <li>
               <a aria-label="Grau, see it live in 3D" href="#configurator">
-                <img alt="Grau" decoding="async" loading="lazy" src="/logos/clients/grau.svg" style={{ height: 17 } as React.CSSProperties} />
+                <img alt="Grau" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/grau.svg")} style={{ height: 17 } as React.CSSProperties} />
               </a>
             </li>
             <li>
               <a aria-label="bOFFx, see it live in 3D" href="#configurator">
-                <img alt="bOFFx" decoding="async" loading="lazy" src="/logos/clients/boffx.svg" style={{ height: 18 } as React.CSSProperties} />
+                <img alt="bOFFx" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/boffx.svg")} style={{ height: 18 } as React.CSSProperties} />
               </a>
             </li>
             <li>
-              <img alt="Baragoni" decoding="async" loading="lazy" src="/logos/clients/baragoni.svg" style={{ height: 19 } as React.CSSProperties} />
+              <img alt="Baragoni" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/baragoni.svg")} style={{ height: 19 } as React.CSSProperties} />
             </li>
             <li>
               <a aria-label="Andrejevic Zlatara, see it live in 3D" href="#configurator">
-                <img alt="Andrejevic" decoding="async" loading="lazy" src="/logos/clients/andrejevic.svg" style={{ height: 30 } as React.CSSProperties} />
+                <img alt="Andrejevic" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/andrejevic.svg")} style={{ height: 30 } as React.CSSProperties} />
               </a>
             </li>
             <li>
               <a aria-label="Tvoj Pecat, see it live in 3D" href="#configurator">
-                <img alt="Tvoj Pecat" decoding="async" loading="lazy" src="/logos/clients/tvoj-pecat.svg" style={{ height: 40 } as React.CSSProperties} />
+                <img alt="Tvoj Pecat" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/tvoj-pecat.svg")} style={{ height: 40 } as React.CSSProperties} />
               </a>
             </li>
             <li>
-              <img alt="The Racquet Club" decoding="async" loading="lazy" src="/logos/clients/racquet-club.svg" style={{ height: 18 } as React.CSSProperties} />
+              <img alt="The Racquet Club" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/racquet-club.svg")} style={{ height: 18 } as React.CSSProperties} />
             </li>
             <li>
-              <img alt="Drive Commerce" decoding="async" loading="lazy" src="/logos/clients/drive-commerce.png" style={{ height: 22 } as React.CSSProperties} />
+              <img alt="Drive Commerce" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/drive-commerce.png")} style={{ height: 22 } as React.CSSProperties} />
             </li>
             <li>
-              <img alt="Threedium" decoding="async" loading="lazy" src="/logos/clients/threedium.svg" style={{ height: 30 } as React.CSSProperties} />
+              <img alt="Threedium" decoding="async" loading="lazy" src={mediaUrl("/logos/clients/threedium.svg")} style={{ height: 30 } as React.CSSProperties} />
             </li>
           </ul>
         </div>

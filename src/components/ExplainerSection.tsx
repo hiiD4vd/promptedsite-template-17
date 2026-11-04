@@ -1,18 +1,22 @@
+import { mediaUrl } from '../config/media';
 import React, { useRef, useState } from 'react';
 
 export const ExplainerSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
+  const togglePlay = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      try {
+        await video.play();
+      } catch {
         setIsPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsPlaying(true);
       }
+    } else {
+      video.pause();
     }
   };
 
@@ -44,9 +48,12 @@ export const ExplainerSection: React.FC = () => {
             ref={videoRef}
             playsInline
             controls={isPlaying}
-            poster="/video/poster.jpg"
-            src="/video/pilot.mp4"
+            poster={mediaUrl("/video/poster.jpg")}
+            src={mediaUrl("/video/pilot.mp4")}
             className="w-full h-auto aspect-video object-cover rounded-2xl"
+            onEnded={() => setIsPlaying(false)}
+            onPause={() => setIsPlaying(false)}
+            onPlay={() => setIsPlaying(true)}
           />
           {!isPlaying && (
             <button aria-label="Play the video" className="em-explainer__play" data-cursor="ignore" type="button">

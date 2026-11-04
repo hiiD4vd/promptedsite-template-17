@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,9 +15,30 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    firstMenuLinkRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMobileMenuOpen(false);
+        requestAnimationFrame(() => menuButtonRef.current?.focus());
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <>
-      <header className={`em em-nav ${isScrolled ? 'is-scrolled' : ''}`}>
+      <header className={`em em-nav ${isScrolled ? 'is-scrolled' : ''} ${mobileMenuOpen ? 'is-open' : ''}`}>
         <nav aria-label="Main menu" className="em-nav__bar">
           <a aria-label="Promptedsite" className="em-nav__brand" data-analytics-target="nav.logo.home" href="#hero">
             <span className="t-wordmark text-[15px]">Promptedsite</span>
@@ -62,9 +85,10 @@ export const Header: React.FC = () => {
               </a>
             </div>
             <button
+              ref={menuButtonRef}
               aria-controls="em-sheet"
               aria-expanded={mobileMenuOpen}
-              aria-label="Open menu"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               className="em-nav__burger"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               data-analytics-target="nav.mobile.open"
@@ -78,14 +102,14 @@ export const Header: React.FC = () => {
       </header>
 
       {mobileMenuOpen && (
-        <div className="em em-sheet is-open" id="em-sheet">
+        <div aria-label="Mobile menu" className="em em-sheet is-open" id="em-sheet" role="dialog">
           <div className="em-sheet__inner">
             <ul className="em-sheet__links">
-              <li><a className="em-sheet__link" href="#hero" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
-              <li><a className="em-sheet__link" href="#configurator" onClick={() => setMobileMenuOpen(false)}>Configurators</a></li>
-              <li><a className="em-sheet__link" href="#explainer" onClick={() => setMobileMenuOpen(false)}>Explainer</a></li>
-              <li><a className="em-sheet__link" href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a></li>
-              <li><a className="em-sheet__link" href="#work" onClick={() => setMobileMenuOpen(false)}>Projects</a></li>
+              <li><a ref={firstMenuLinkRef} className="em-nav__link" href="#hero" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
+              <li><a className="em-nav__link" href="#configurator" onClick={() => setMobileMenuOpen(false)}>Configurators</a></li>
+              <li><a className="em-nav__link" href="#explainer" onClick={() => setMobileMenuOpen(false)}>Explainer</a></li>
+              <li><a className="em-nav__link" href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a></li>
+              <li><a className="em-nav__link" href="#work" onClick={() => setMobileMenuOpen(false)}>Projects</a></li>
             </ul>
           </div>
         </div>
