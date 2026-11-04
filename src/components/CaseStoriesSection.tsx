@@ -1,3 +1,4 @@
+import { mediaUrl } from '../config/media';
 import React from 'react';
 
 export const CaseStoriesSection: React.FC = () => {
@@ -36,7 +37,7 @@ export const CaseStoriesSection: React.FC = () => {
               alt="Dozze bottle in 3D"
               decoding="async"
               loading="lazy"
-              src="/renders/dozze-bottle.webp"
+              src={mediaUrl("/renders/dozze-bottle.webp")}
               style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' } as React.CSSProperties}
             />
           </div>
@@ -76,7 +77,7 @@ export const CaseStoriesSection: React.FC = () => {
                 alt="Globe-Trotter"
                 decoding="async"
                 loading="lazy"
-                src="/renders/globe-trotter.webp"
+                src={mediaUrl("/renders/globe-trotter.webp")}
                 style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' } as React.CSSProperties}
               />
             </div>
@@ -101,7 +102,7 @@ export const CaseStoriesSection: React.FC = () => {
                 alt="Grau"
                 decoding="async"
                 loading="lazy"
-                src="/renders/grau-salt.webp"
+                src={mediaUrl("/renders/grau-salt.webp")}
                 style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' } as React.CSSProperties}
               />
             </div>
@@ -126,7 +127,7 @@ export const CaseStoriesSection: React.FC = () => {
                 alt="Baragoni"
                 decoding="async"
                 loading="lazy"
-                src="/renders/baragoni-bag.webp"
+                src={mediaUrl("/renders/baragoni-bag.webp")}
                 style={{ position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent' } as React.CSSProperties}
               />
             </div>

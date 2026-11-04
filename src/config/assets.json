@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "project": "promptedsite-template-17",
+  "release": "96d9fd45ee4c8bed",
+  "prefix": "templates/promptedsite-template-17/releases/96d9fd45ee4c8bed",
+  "baseUrl": "https://cdn.promptedsite.com/templates/promptedsite-template-17/releases/96d9fd45ee4c8bed",
+  "totalBytes": 86840179,
+  "files": {
+    "ember/cta-glow.webp": {
+      "bytes": 31786,
+      "sha256": "ecbd77f2bbdb6b7fa93d50d861dab4b41341f33de7a48b10546a8dd5f821a8d8",
+      "contentType": "image/webp"
+    },
+    "ember/hero-poster.webp": {
+      "bytes": 29484,
+      "sha256": "781d7118b9043f599ed8e4e7c30006f6eb62f118b066ca5496d8ef74d178b21c",
+      "contentType": "image/webp"
+    },
+    "ember/hero.mp4": {
+      "bytes": 1374608,
+      "sha256": "8a8396ae32e8f0d9219e5cbcb777bb541f61ad7d2ea5d9e32a9c713aa82f9bc8",
+      "contentType": "video/mp4"
+    },
+    "ember/pattern-gold.webp": {
+      "bytes": 233954,
+      "sha256": "9036c24937c604eef02dba670969244dc7d30ae91894108879c5c74667c75bb5",
+      "contentType": "image/webp"
+    },
+    "ember/pattern-ink.webp": {
+      "bytes": 54054,
+      "sha256": "0ef519a80cdabe9f3366ef57d4adb2c5401d430d3abe0396cb875fb7c306e048",
+      "contentType": "image/webp"
+    },
+    "fonts/archivo-latin-ext.woff2": {
+      "bytes": 34364,
+      "sha256": "e65711486b93fdc7683ea3c64e713fa0224a93e444ec97e323917e61ebd17772",
+      "contentType": "font/woff2"
+    },
+    "fonts/archivo-latin.woff2": {
+      "bytes": 90096,
+      "sha256": "4c98b9d490d1698ec95f2ff17a6c7d0e72691864c0c5d7bc2a2c161b45afe5ad",
+      "contentType": "font/woff2"
+    },
+    "fonts/archivo-mono.woff2": {
+      "bytes": 85856,
+      "sha256": "a75c792f980dc1dbe0e85efb721808267e32d2e7ef6c4a99d525c842d8712a08",
+      "contentType": "font/woff2"
+    },
+    "logos/clients/andrejevic.svg": {
+      "bytes": 12972,
+      "sha256": "f1e28a86a81c3c52848e9d4aee9df7b50ab79bce88a819de57deac7014967b98",
+      "contentType": "image/svg+xml"
+    },
+    "logos/clients/baragoni.svg": {
+      "bytes": 8087,
+      "sha256": "d2737f3757d63d635ffb73648ff578ecf618a1384a4be98b4a0dea5bf0829bd2",
+      "contentType": "image/svg+xml"
+    },
+    "logos/clients/boffx.svg": {
+      "bytes": 948,
+      "sha256": "770124d059519b58e9ce5b942fdb7a72cf0cab7ad149c314ac14734780ed4888",
+      "contentType": "image/svg+xml"
+    },
+    "logos/clients/dozze.png": {
+      "bytes": 8918,
+      "sha256": "32833d913035f576febd2637deb81e40b31216c806520978310f435c788c397c",
+      "contentType": "image/png"
+    },
+    "logos/clients/drive-commerce.png": {
+      "bytes": 8996,
+      "sha256": "ab9328d0a33ae564c937571e192b92c20ee4af14585b3dba6593c8a4b375370f",
+      "contentType": "image/png"
+    },
+    "logos/clients/globe-trotter.svg": {
+      "bytes": 21374,
+      "sha256": "283c356609f446f3405d1071457281f2313f9098fcab269dd5c96e682091df3c",
+      "contentType": "image/svg+xml"
+    },
+    "logos/clients/grau.svg": {
+      "bytes": 1156,
+      "sha256": "2e1167a2d80ee5b478ba9a0af8550b03aba0507ab37a3a108bba486ac5467565",
+      "contentType": "image/svg+xml"
+    },
+    "logos/clients/racquet-club.svg": {
+      "bytes": 10512,
+      "sha256": "16ed8128a212fb11ddc8afb2baa504258e0ccfebc3d8a667b31afb8904826a74",
+      "contentType": "image/svg+xml"
+    },
+    "logos/clients/threedium.svg": {
+      "bytes": 1869,
+      "sha256": "7f4352b2eb1bbc3d041facd476e1e73e8bba061ab2c88e949d8760b6fb832346",
+      "contentType": "image/svg+xml"
+    },
+    "logos/clients/tvoj-pecat.svg": {
+      "bytes": 79973,
+      "sha256": "0a7a404b311ee9d3c043571750cdbb67d24c26709de44a0f6ce66c7b6f1c227d",
+      "contentType": "image/svg+xml"
+    },
+    "models/ar-room.webp": {
+      "bytes": 25682,
+      "sha256": "94fcf8e7f2efebfb7ffbf2c849ce6dd021848d31f494fed6c08f45c549413651",
+      "contentType": "image/webp"
+    },
+    "models/bottles.glb": {
+      "bytes": 198164,
+      "sha256": "1ab2d9f55b631d5ad7e35ce3749a042f2c069a73a91967981253515bfc263374",
+      "contentType": "model/gltf-binary"
+    },
+    "models/chairs.glb": {
+      "bytes": 9323520,
+      "sha256": "54dfe28eba99166e4bc6a5a739406af70e8e9ff10577c765747645903933c841",
+      "contentType": "model/gltf-binary"
+    },
+    "models/footwear-v2.glb": {
+      "bytes": 1465176,
+      "sha256": "3a7df207ec50ba3e2e90771558de72a2853fc1ebe546d73e9c71fa9131b4f71c",
+      "contentType": "model/gltf-binary"
+    },
+    "models/furniture.glb": {
+      "bytes": 5964552,
+      "sha256": "c49a46fe289676137d487ddebf03d6ae08848a1e8e5106d8ddf7253d54f7daff",
+      "contentType": "model/gltf-binary"
+    },
+    "models/jewellery.glb": {
+      "bytes": 2492512,
+      "sha256": "3e3f50f10e996f6706408c4ccd1234d4ac2cb491f50711bb0cae68d9c2969832",
+      "contentType": "model/gltf-binary"
+    },
+    "models/leather.glb": {
+      "bytes": 1707660,
+      "sha256": "fdcd21d916fbede7b520156d2bfaee0d0c0015894fa78f0790186e691bc8354b",
+      "contentType": "model/gltf-binary"
+    },
+    "models/luggage.glb": {
+      "bytes": 2529624,
+      "sha256": "3b31579171159d6468ded138705a81015b875d31c0582836b3c6133a69ddfb60",
+      "contentType": "model/gltf-binary"
+    },
+    "renders/baragoni-bag.webp": {
+      "bytes": 22968,
+      "sha256": "0b160f2304f6825ee30d94ceeb3f682a9b9addcfa6b77d512c6947bee092d500",
+      "contentType": "image/webp"
+    },
+    "renders/dozze-bottle.webp": {
+      "bytes": 10348,
+      "sha256": "7b5f6a391824dc7b556d82cc2e5598338c0745548bdd98bae8f77c30b7adb2d7",
+      "contentType": "image/webp"
+    },
+    "renders/globe-trotter.webp": {
+      "bytes": 31826,
+      "sha256": "d9b8f323d865fd5cbd12d50307ba43ab01751b7ee9cfb711c06d9cb80d55c251",
+      "contentType": "image/webp"
+    },
+    "renders/grau-salt.webp": {
+      "bytes": 10834,
+      "sha256": "b181ae7210611360cf0b187c56764ef819c4d3585b8643a2cc34e5c678459fd6",
+      "contentType": "image/webp"
+    },
+    "video/pilot-mobile.mp4": {
+      "bytes": 29671309,
+      "sha256": "e98fd9cd1a3f822ce85630e5c90a164854ca62075907da73aa955221129a2d96",
+      "contentType": "video/mp4"
+    },
+    "video/pilot.mp4": {
+      "bytes": 31006952,
+      "sha256": "8bed93d94d1dfcf014ec735550ff23516959474bcd6e20a057c8afee1fb27d10",
+      "contentType": "video/mp4"
+    },
+    "video/poster-mobile.jpg": {
+      "bytes": 152455,
+      "sha256": "01d2155b93298bc7efd7e985556c54a120b3485eeab456aa9f631e411961e5ff",
+      "contentType": "image/jpeg"
+    },
+    "video/poster.jpg": {
+      "bytes": 137590,
+      "sha256": "ea8839d2e7b00dfa26b4e645aa03f0286d1fadeb6c9cc93294f0d4511bf50c9f",
+      "contentType": "image/jpeg"
+    }
+  }
+}
