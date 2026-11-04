@@ -10,9 +10,14 @@ import { ParametricSection } from './components/ParametricSection';
 import { OutcomesSection } from './components/OutcomesSection';
 import { CaseStoriesSection } from './components/CaseStoriesSection';
 import { Footer } from './components/Footer';
+import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
 
 export const App: React.FC = () => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   useEffect(() => {
+    if (prefersReducedMotion) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -20,16 +25,18 @@ export const App: React.FC = () => {
       smoothWheel: true
     });
 
+    let animationFrameId = 0;
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      animationFrameId = requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf);
+    animationFrameId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(animationFrameId);
       lenis.destroy();
     };
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] relative selection:bg-brand-gold selection:text-black">
@@ -38,11 +45,13 @@ export const App: React.FC = () => {
       {/* Film grain texture */}
       <div className="grain" />
 
+      <a className="skip-link" href="#hero">Skip to content</a>
+
       {/* Navigation Header */}
       <Header />
 
       {/* Main Sections */}
-      <main id="hero">
+      <main id="hero" tabIndex={-1}>
         <HeroSection />
         <ExplainerSection />
         <ProblemSection />
