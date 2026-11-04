@@ -1,3 +1,4 @@
+import { mediaUrl } from '../config/media';
 export interface ModelConfig {
   key: string;
   label: string;
@@ -44,7 +45,7 @@ export const PRODUCT_MODELS: ModelConfig[] = [
     "label": "Luggage",
     "line": "Shell, finish and hardware, checked before the case is ever opened in a shop.",
     "spec": "2.5 MB \u00b7 adds 0.3 s to page load",
-    "url": "/models/luggage.glb",
+    "url": mediaUrl("/models/luggage.glb"),
     "shellMaterial": "07 - Default",
     "openClip": "open",
     "openRange": [
@@ -245,7 +246,7 @@ export const PRODUCT_MODELS: ModelConfig[] = [
     "label": "Leather goods",
     "line": "Every leather and every clasp, without a new photo shoot per combination.",
     "spec": "1.7 MB \u00b7 adds 0.3 s to page load",
-    "url": "/models/leather.glb",
+    "url": mediaUrl("/models/leather.glb"),
     "frameTall": 0.76,
     "shellMaterial": "leather",
     "openClip": "open",
@@ -295,7 +296,7 @@ export const PRODUCT_MODELS: ModelConfig[] = [
     "label": "Furniture",
     "line": "Fabric, dimension and layout decided on the product page, not in a showroom.",
     "spec": "6.0 MB \u00b7 adds 1.0 s to page load \u00b7 AR",
-    "url": "/models/furniture.glb",
+    "url": mediaUrl("/models/furniture.glb"),
     "frameTall": 0.73,
     "poseTall": {
       "x": 0.16
@@ -318,7 +319,7 @@ export const PRODUCT_MODELS: ModelConfig[] = [
     "label": "Configurable chairs",
     "line": "One chair, six choices: size, arms, armpads, back support, casters and tilt. 432 combinations, priced as the customer builds it.",
     "spec": "7.1 MB \u00b7 adds 1.3 s to page load",
-    "url": "/models/chairs.glb",
+    "url": mediaUrl("/models/chairs.glb"),
     "shellMaterial": "fabric",
     "hideMaterials": [
       "ground_1",
@@ -431,7 +432,7 @@ export const PRODUCT_MODELS: ModelConfig[] = [
     "label": "Footwear",
     "line": "Last, leather and sole, seen from the angles a photograph never shows.",
     "spec": "1.4 MB",
-    "url": "/models/footwear-v2.glb",
+    "url": mediaUrl("/models/footwear-v2.glb"),
     "hideMaterials": [
       "ground"
     ],
@@ -448,7 +449,7 @@ export const PRODUCT_MODELS: ModelConfig[] = [
     "label": "Bottles and tumblers",
     "line": "Colour, lid and engraving chosen live, on the brand's own store.",
     "spec": "0.2 MB \u00b7 adds 0.1 s to page load \u00b7 AR",
-    "url": "/models/bottles.glb",
+    "url": mediaUrl("/models/bottles.glb"),
     "shellMaterial": "Material.004",
     "hideMaterials": [
       "overlay",
@@ -478,7 +479,7 @@ export const PRODUCT_MODELS: ModelConfig[] = [
     "label": "Jewellery",
     "line": "Small objects where the detail is the entire product.",
     "spec": "2.5 MB \u00b7 adds 0.4 s to page load",
-    "url": "/models/jewellery.glb",
+    "url": mediaUrl("/models/jewellery.glb"),
     "gemMaterial": "diamond",
     "detailZoom": {
       "zoom": 1.75,
